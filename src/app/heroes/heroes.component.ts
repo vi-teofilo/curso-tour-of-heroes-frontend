@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HeroService } from '../service/hero.service';
 
 import { Hero } from './heroes.model';
@@ -22,6 +21,7 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     // usando o of na service ele ja faz o next e o complete por isso nos possibilita fazer a utilizacao de uma forma sucinta
     this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
+
 
     // Para recuperar os valores e Tratar o erro se necessario Observable: mais detalhes (https://rxjs.dev/guide/observable).
     // this.heroService.getHeroes().subscribe({

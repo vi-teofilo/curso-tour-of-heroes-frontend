@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError } from 'rxjs';
+import { Observable, of} from 'rxjs';
 import { Hero } from '../heroes/heroes.model';
 import { HEROES } from '../mock-heroes';
 import { MessageService } from './message.service';
@@ -14,7 +14,6 @@ export class HeroService {
   }
 
   getHeroes(): Observable<Hero[]> {
-
     const heroes = of(HEROES)
     this.messageService.add('HeroService: fetched heroes')
     //return throwError(new Error('Errouu'))
