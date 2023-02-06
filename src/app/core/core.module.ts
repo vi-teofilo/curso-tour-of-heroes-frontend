@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-
+const COMPONENTS = [MessagesComponent, ToolbarComponent]
+const MODULES = [FlexLayoutModule,MaterialModule ]
 
 @NgModule({
-  declarations: [],
+  declarations: [COMPONENTS],
   imports: [
-    CommonModule,
-    MaterialModule
+    MODULES
   ],
-  exports:[MaterialModule],
+  exports:[COMPONENTS, MODULES],
 })
 export class CoreModule { }
