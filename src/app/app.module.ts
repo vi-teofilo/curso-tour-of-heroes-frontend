@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoreModule } from './core/core.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { HeroesModule } from './heroes/heroes.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { HeroesModule } from './heroes/heroes.module';
     BrowserAnimationsModule,
     FlexLayoutModule,
     CoreModule,
-    DashboardModule,
-    HeroesModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

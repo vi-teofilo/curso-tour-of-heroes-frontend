@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-page-not-found',
-  template:`
+  template: `
     <mat-card>
-      <mat-card-title>
-        404: Page Not Found
-      </mat-card-title>
+      <mat-card-title> 404: Page Not Found </mat-card-title>
       <mat-card-content>
         We couldn't find that page! Not even with x-ray vision.
       </mat-card-content>
@@ -17,15 +15,12 @@ import { Component } from '@angular/core';
       </mat-card-actions>
     </mat-card>
   `,
-
-  styles:[
+  styles: [
     `
-    :host{
-      text-aling: center;
-    }
-    `
-  ]
+      :host {
+        text-aling: center;
+      }
+    `,
+  ],
 })
-export class PageNotFoundComponent {
-
-}
+export class PageNotFoundComponent {}
