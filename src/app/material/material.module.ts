@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const MODULES = [
   MatToolbarModule,
@@ -20,7 +22,9 @@ const MODULES = [
   MatListModule,
   MatInputModule,
   MatTableModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule
 ]
 
 

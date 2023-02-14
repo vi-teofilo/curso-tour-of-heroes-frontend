@@ -6,8 +6,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
-const COMPONENTS = [MessagesComponent, ToolbarComponent,PageNotFoundComponent]
+
+const COMPONENTS = [MessagesComponent, ToolbarComponent,PageNotFoundComponent, LoadingComponent]
 const MODULES = [FlexLayoutModule,MaterialModule ]
 
 @NgModule({
