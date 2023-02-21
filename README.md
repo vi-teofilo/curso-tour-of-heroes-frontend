@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [![DeepScan grade](https://deepscan.io/api/teams/20190/projects/23636/branches/720203/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=20190&pid=23636&bid=720203)
 
 ## Este projeto esta separado por Modules, para que seja facilitada a Manetencao.
+
+## Este projeto tem base em uma estrutura de facil entendimento, mas que a estrutura seja funcional.
