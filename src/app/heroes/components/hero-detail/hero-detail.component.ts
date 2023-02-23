@@ -34,4 +34,8 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.updateHero(this.hero).subscribe((hero) => console.log(hero))
   }
 
+  isFormValid(): boolean {
+    return !!this.hero.name.trim();
+  }
+
 }
