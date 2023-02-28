@@ -32,3 +32,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Este projeto esta separado por Modules, para que seja facilitada a Manetencao.
 
 ## Este projeto tem base em uma estrutura de facil entendimento, mas que a estrutura seja funcional.
+
+## https://deepscan.io/ usado para validar os gates de qualidade do projeto
