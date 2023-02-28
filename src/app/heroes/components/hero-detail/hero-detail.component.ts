@@ -11,6 +11,7 @@ import { Hero } from '../../../core/models/heroes.model';
 })
 export class HeroDetailComponent implements OnInit {
   hero!: Hero
+  isEditing!: boolean
   constructor(private heroService: HeroService,
     private location: Location, private route: ActivatedRoute){
 
@@ -21,16 +22,29 @@ export class HeroDetailComponent implements OnInit {
   }
 
   getHero(): void{
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const paramId = this.route.snapshot.paramMap.get('id');
 
-    this.heroService.getHero(id).subscribe((hero) => (this.hero = hero))
+    if (paramId == 'new') {
+      this.isEditing = false
+      this.hero = {name: ''} as Hero
+    }else{
+      this.isEditing = true
+      const id = Number(paramId)
+      this.heroService.getHero(id).subscribe((hero) => (this.hero = hero))
+    }
+
+
   }
 
   goBack(): void{
     this.location.back();
   }
 
-  save(): void{
+  create(): void{
+    this.heroService.create(this.hero).subscribe((hero) => console.log(hero))
+  }
+
+  update(): void{
     this.heroService.updateHero(this.hero).subscribe((hero) => console.log(hero))
   }
 
