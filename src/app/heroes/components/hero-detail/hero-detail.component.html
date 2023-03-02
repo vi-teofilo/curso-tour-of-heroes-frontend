@@ -6,16 +6,11 @@
       <mat-form-field>
         <mat-form-field *ngIf="isEditing">
           <mat-label>ID</mat-label>
-          <input matInput disabled [value]="hero.id" />
+          <input matInput disabled [value]="hero.id">
         </mat-form-field>
         <mat-form-field>
           <mat-label>Hero name</mat-label>
-          <input
-            id="name"
-            [(ngModel)]="hero.name"
-            placeholder="name"
-            type="text"
-          />
+          <input matInput [(ngModel)]="hero.name" placeholder="name" type="text">
         </mat-form-field>
       </mat-form-field>
     </mat-card-content>
@@ -40,6 +35,6 @@
         Update
       </button>
       <button mat-raised-button (click)="goBack()">Go back</button>
-    </mat-card-actions>
+  </mat-card-actions>
   </mat-card>
 </div>
