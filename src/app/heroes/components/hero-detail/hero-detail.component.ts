@@ -3,6 +3,7 @@ import { Location} from '@angular/common';
 import { HeroService } from '../../../core/service/hero.service';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../../../core/models/heroes.model';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-hero-detail',
@@ -12,8 +13,13 @@ import { Hero } from '../../../core/models/heroes.model';
 export class HeroDetailComponent implements OnInit {
   hero!: Hero
   isEditing!: boolean
+
+  form = this.fb.group({
+    id: [{value: '', disable: true}],
+    name: []
+  })
   constructor(private heroService: HeroService,
-    private location: Location, private route: ActivatedRoute){
+    private location: Location, private route: ActivatedRoute, private fb: FormBuilder){
 
   }
 
