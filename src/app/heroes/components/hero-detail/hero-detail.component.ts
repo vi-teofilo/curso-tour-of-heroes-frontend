@@ -16,7 +16,7 @@ export class HeroDetailComponent implements OnInit {
 
   form = this.fb.group({
     id: [{value: '', disable: true}],
-    name: []
+    name: ['', Validators.required]
   })
   constructor(private heroService: HeroService,
     private location: Location, private route: ActivatedRoute, private fb: FormBuilder){
@@ -52,10 +52,6 @@ export class HeroDetailComponent implements OnInit {
 
   update(): void{
     this.heroService.updateHero(this.hero).subscribe((hero) => console.log(hero))
-  }
-
-  isFormValid(): boolean {
-    return !!this.hero.name.trim();
   }
 
 }
