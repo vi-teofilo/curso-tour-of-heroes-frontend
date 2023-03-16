@@ -48,11 +48,27 @@ export class HeroDetailComponent implements OnInit {
   }
 
   create(): void{
-    this.heroService.create(this.hero).subscribe((hero) => console.log(hero))
+
+    const {valid, value} = this.form
+
+    if (valid) {
+      const hero: Hero = {
+        name: value.name
+      } as Hero
+      this.heroService.create(hero).subscribe((hero) => console.log(hero))
+    }
   }
 
   update(): void{
-    this.heroService.updateHero(this.hero).subscribe((hero) => console.log(hero))
+    const {valid, value} = this.form
+
+    if (valid) {
+      const hero: Hero = {
+        id: this.hero.id,
+        name: value.name
+      } as Hero
+      this.heroService.updateHero(hero).subscribe((hero) => console.log(hero))
+    }
   }
 
 }
