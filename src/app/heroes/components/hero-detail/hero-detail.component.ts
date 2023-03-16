@@ -12,10 +12,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class HeroDetailComponent implements OnInit {
   hero!: Hero
-  isEditing!: boolean
+  isEditing = false
 
   form = this.fb.group({
-    id: [{value: '', disable: true}],
+    id: [{value: 0, disabled: true}],
     name: ['', Validators.required]
   })
   constructor(private heroService: HeroService,
@@ -30,13 +30,14 @@ export class HeroDetailComponent implements OnInit {
   getHero(): void{
     const paramId = this.route.snapshot.paramMap.get('id');
 
-    if (paramId == 'new') {
-      this.isEditing = false
-      this.hero = {name: ''} as Hero
-    }else{
+    if (paramId != 'new') {
       this.isEditing = true
       const id = Number(paramId)
-      this.heroService.getHero(id).subscribe((hero) => (this.hero = hero))
+      this.heroService.getHero(id).subscribe((hero) => {
+        this.hero = hero
+        this.form.controls['id'].setValue(hero.id);
+        this.form.controls['name'].setValue(hero.name);
+      })
     }
 
 

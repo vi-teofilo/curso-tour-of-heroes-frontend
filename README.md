@@ -33,6 +33,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Este projeto tem base em uma estrutura de facil entendimento, mas que a estrutura seja funcional.
 
-## https://deepscan.io/ usado para validar os gates de qualidade do projeto
+## https://deepscan.io/ usado para validar os gates de qualidade do projeto 
 
 ## FlexLayout para melhorar a escrita no html/css https://github.com/angular/flex-layout
