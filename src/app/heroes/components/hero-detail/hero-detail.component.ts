@@ -48,7 +48,6 @@ export class HeroDetailComponent implements OnInit {
   }
 
   create(): void{
-
     const {valid, value} = this.form
 
     if (valid) {
