@@ -16,7 +16,7 @@ export class HeroDetailComponent implements OnInit {
 
   form = this.fb.group({
     id: [{value: 0, disabled: true}],
-    name: ['', Validators.required]
+    name: ['', [Validators.required, Validators.minLength(3)]]
   })
   constructor(private heroService: HeroService,
     private location: Location, private route: ActivatedRoute, private fb: FormBuilder){
