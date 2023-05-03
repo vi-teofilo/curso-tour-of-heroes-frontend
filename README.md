@@ -36,3 +36,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## https://deepscan.io/ usado para validar os gates de qualidade do projeto  
 
 ## FlexLayout para melhorar a escrita no html/css https://github.com/angular/flex-layout
+
+## retorno 02/05
